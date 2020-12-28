@@ -7,7 +7,7 @@
 			
 	Returns: True if success, false if not.
 */
-native file_move(file[], destination[]);
+native file_move(const file[], const destination[]);
 
 /*
 	Function: file_copy(file[], destination[]);
@@ -18,7 +18,7 @@ native file_move(file[], destination[]);
 			
 	Returns: True if success, false if not.
 */
-native file_copy(file[], destination[]);
+native file_copy(const file[], const destination[]);
 
 /*
 	Function: file_delete(file[]);
@@ -28,7 +28,7 @@ native file_copy(file[], destination[]);
 			
 	Returns: True if success, false if not.
 */
-native file_delete(file[]);
+native file_delete(const file[]);
 
 /*
 	Function: file_create(file[]);
@@ -38,7 +38,7 @@ native file_delete(file[]);
 			
 	Returns: True if success, false if not.
 */
-native file_create(file[]);
+native file_create(const file[]);
 
 /*
 	Function: file_write(file[], text[], mode[] = "a");
@@ -50,7 +50,7 @@ native file_create(file[]);
 			
 	Returns: True if success, false if not.
 */
-native file_write(file[], text[], mode[] = "a");
+native file_write(const file[], const text[], const mode[] = "a");
 
 /*
 	Function: file_read(file[], storage[], size = sizeof(storage));
@@ -62,7 +62,7 @@ native file_write(file[], text[], mode[] = "a");
 			
 	Returns: True if success, false if not.
 */
-native file_read(file[], storage[], size = sizeof(storage));
+native file_read(const file[], storage[], size = sizeof(storage));
 
 /*
 	Function: file_log();
@@ -78,7 +78,7 @@ native file_log();
 			
 	Returns: True if success, false if not.
 */
-native file_exists(file[]);
+native file_exists(const file[]);
 
 /*
 	Function: f_open(file[], mode[] = "r");
@@ -89,7 +89,7 @@ native file_exists(file[]);
 			
 	Returns: The file handle if success, else it returns false.
 */
-native File:f_open(file[], mode[] = "r"); 
+native File:f_open(const file[], const mode[] = "r"); 
 
 /*
 	Function: f_close(File: file);
@@ -122,7 +122,7 @@ native f_read(File: file, storage[], size = sizeof(storage));
 			
 	Returns: True if success, false if not.
 */
-native f_write(File: file, string[]);
+native f_write(File: file, const string[]);
 
 /*
 	Function: dir_create(directory[]);
@@ -132,7 +132,7 @@ native f_write(File: file, string[]);
 			
 	Returns: True if success, false if not.
 */
-native dir_create(directory[]);
+native dir_create(const directory[]);
 
 /*
 	Function: dir_delete(directory[]);
@@ -142,7 +142,7 @@ native dir_create(directory[]);
 			
 	Returns: True if success, false if not.
 */
-native dir_delete(directory[]);
+native dir_delete(const directory[]);
 
 /*
 	Function: dir_exists(directory[]);
@@ -152,7 +152,7 @@ native dir_delete(directory[]);
 			
 	Returns: 1 if it exists, 2 if it is a file and 0 if it does not exist.
 */
-native dir_exists(directory[]);
+native dir_exists(const directory[]);
 
 /*
 	Function: dir:dir_open(directory[]);
@@ -162,7 +162,7 @@ native dir_exists(directory[]);
 			
 	Returns: 1 if it exists, and 0 if it does not exist.
 */
-native dir:dir_open(directory[]);
+native dir:dir_open(const directory[]);
 
 /*
 	Function: dir_close(dir:handle);
